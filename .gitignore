@@ -1,0 +1,16 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore Python files
+__pycache__/
+*.pyc
+
+# Ignore Node.js files (if applicable)
+node_modules/
+
+# Ignore VSCode settings
+.vscode/
