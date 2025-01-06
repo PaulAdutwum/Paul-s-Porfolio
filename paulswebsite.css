@@ -164,7 +164,7 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
-    padding: 5px 15px;
+    padding: 6px 15px;
     border-radius: 5px;
     animation: scroll-horizontally 10s linear infinite;
     width: auto; /* Auto width adjusts to text size */
@@ -174,7 +174,7 @@ nav {
 
 .overlay-text p {
     margin: 0;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     white-space: nowrap;
 }
@@ -302,8 +302,9 @@ footer {
 .about-me p {
     margin: 10px 0;
     line-height: 1.8;
-    font-size: 1.1rem;
+    font-size: 2rem;
     text-align: justify;
+    line-height: 2.4;
 }
 
 /* Add a subtle transition to links (if needed) */
@@ -318,9 +319,23 @@ footer {
 
 }
 
+@media (max-width: 768px) {
+    .about-me p {
+        font-size: 1.8rem;
+        line-height: 2.2;
+    }
+}
+
+@media (min-width: 769px) {
+    .about-me p {
+        font-size: 2rem;
+        line-height: 2.4;
+    }
+}
+
 /* Footer Section */
 .footer-section {
-    height: 20%;
+    height: 18%;
     background-color: #001f3f; /* Dark blue background */
     color: white;
     text-align: center;
@@ -383,6 +398,33 @@ footer {
     color: #cccccc; /* Light gray text for copyright */
 }
 
+.video-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+video {
+    max-width: 100%;
+    height: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.responsive-video-projects {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintains aspect ratio automatically */
+    object-fit: cover; /* Ensures the video fills the container without distortion */
+    display: block; /* Removes any inline space below the video */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+}
+
+@media (max-width: 768px) {
+    .responsive-video {
+        height: auto; /* Still maintains aspect ratio */
+    }
+}
+
 .projects-page .projects-section {
     background-color: #000; /* Black */
     color: #f4f4f4; /* Light gray text for contrast */
@@ -419,6 +461,15 @@ footer {
     max-width: 300px;
     width: 100%;
     text-align: left;
+}
+
+.projects-video {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    display: block;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .card h3 {
@@ -511,3 +562,43 @@ footer {
     font-size: 1rem;
     line-height: 1.6;
 }
+
+.video-container {
+    width: 100%; 
+    height: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px 0;
+}
+
+.responsive-video {
+    width: 100%; 
+    max-width: 1200px; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.nature-photo {
+    position: relative;
+    width: 100%; /* Ensures the section spans the full width */
+    height: 300px;
+    overflow: hidden; /* Ensures content doesn’t overflow the container */
+    margin: 20px 0;
+}
+
+.video {
+    width: 100%; /* Full width for the video */
+    height: 100%; /* Match the height of the container */
+}
+
+.responsive-video {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+
+
