@@ -15,8 +15,8 @@
                 <h1>Meet Paul</h1>
             </div>
             <!-- Search -->
-            <form class="search">
-                <input type="text" placeholder="Search..." />
+            <form class="search" onsubmit="highlightNavLink(event)">
+                <input type="text" id="search-input" placeholder="Search..." />
                 <button type="submit">Search</button>
             </form>
             <!-- Navigation -->
@@ -25,18 +25,18 @@
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="paulswebsite.html">Home</a></li>
-                    <li><a href="paulsresume.html">Resume</a></li>
-                    <li><a href="paulsprojects.html">Projects</a></li>
+                    <li><a id="nav-home" href="paulswebsite.html">Home</a></li>
+                    <li><a id="nav-resume"  href="paulsresume.html">Resume</a></li>
+                    <li><a id="nav-projects" href="paulsprojects.html">Projects</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">Interests</a>
+                        <a  id="nav-activities" href="#" class="dropbtn">Activities</a>
                         <ul class="dropdown-content">
-                            <li><a href="#extracurriculars">Extracurriculars</a></li>
-                            <li><a href="#hobbies">Hobbies</a></li>
+                            <li><a href="#hobbies">Honors and Awards</a></li>
+                            <li><a href="#extra-curricular">Extracurriculars</a></li>
                             <li><a href="#organizations">Organizations</a></li>
                         </ul>
                     </li>
-                    <li><a href="paulspublications.html">Publications</a></li>
+                    <li><a  id="nav-publicatons" href="paulspublications.html">Publications</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,7 +45,7 @@
         <!-- Photo Placeholder -->
         <section class="nature-photo">
             <div class="image-container">
-                <img src="placeholder.jpg" alt="Interest Photo" class="responsive-img">
+                <img src="Paul.jpeg" alt="Interest Photo" class="responsive-img">
                 <div class="overlay-text">
                     <p>Explore My Interests</p>
                 </div>
@@ -53,78 +53,176 @@
         </section>
 
         <!-- Interests Section -->
-        <section class="interests-section">
-            <h2>My Interests</h2>
+        <section class="interests-section"></section>
+            
             <!-- Extracurriculars -->
-            <section id="extra-curricular" style="background-color: #1a1a2e; color: #ecf0f1; padding: 40px 20px; text-align: center;">
-                <h2>Extra-Curricular Activities</h2>
-                <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <section id="extra-curricular" style="background-color: #000000; color: #ecf0f1; padding: 40px 20px; text-align: center;">
+                <h2 style="color: #f39c12;">Extra-Curricular Activities</h2>
+                <div class="parent-card">
                     <!-- Community Advisor -->
-                    <div style="background-color: #162447; color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 300px; text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                        <h3 style="font-size: 1.5rem; color: #4cafef;">Community Advisor</h3>
+                    <div class="mini-card">
+                        <h3 class="activity-title">Community Advisor</h3>
                         <p>
-                            Worked with the Office of Residence Life to support students’ transition to college, fostering a welcoming and supportive environment. 
-                            Settled roommate conflicts, promoted harmony, respect, and awareness in residential spaces, and organized bi-monthly social programs to 
-                            build community among students.
+                            Works with the Office of Residence Life to support students’ transition to college, fostering a welcoming and supportive school environment. 
+                            Mediates roommate conflicts, promotes harmony, respect, and awareness in residential spaces. Organize bi-monthly social programs to promote
+                            community building among students.
                         </p>
-                        <p><b>Skills:</b> Leadership, Mentorship, Strategic Communication</p>
+                        <p><b>Skills:</b> Leadership, Conflict Resolution, Strategic Communication</p>
                     </div>
             
                     <!-- Bonner Racial Justice Fellow -->
-                    <div style="background-color: #162447; color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 300px; text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                        <h3 style="font-size: 1.5rem; color: #4cafef;">Bonner Racial Justice Fellow</h3>
+                    <div class="mini-card">
+                        <h3 class="activity-title">Bonner Racial Justice Fellow</h3>
                         <p>
                             Developed strategic plans for integrating BIPOC-centered community engagement into programming at the Office of Intercultural Education 
-                            and the Harward Center. Coordinated anti-racial youth development programs for marginalized youth in Lewiston-Auburn, and led collaborations 
-                            between BIPOC Bates students and the Tree Street Youth Center to provide opportunities for underserved youth in Maine.
+                            and at Bates College. Coordinated anti-racial youth development programs for youth in Lewiston-Auburn neighborhood. Fasilitated collaborative  
+                            programs between BIPOC Bates students and the Tree Street Youth Center to provide mentorhsip opportunities for underserved youth in Lewsiton Maine.
                         </p>
+                        <p><b>Skills:</b> Teamwork, Critical Thinking, Time Management</p>
                     </div>
             
                     <!-- Volunteer Mentor -->
-                    <div style="background-color: #162447; color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 300px; text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                        <h3 style="font-size: 1.5rem; color: #4cafef;">Volunteer Mentor, Aspirations Club</h3>
+                    <div class="mini-card">
+                        <h3 class="activity-title">Volunteer Mentor, Aspirations Club</h3>
                         <p>
-                            Led career and trade development sessions during Auburn Middle School’s Aspirations Day. Taught high school students in Lewiston-Auburn 
-                            how to write resumes and cover letters, find job opportunities, conduct mock interviews, and prepare for leadership roles and career exploration.
+                            Lead career and trade development sessions during Auburn Middle School’s Aspirations Day. Educates high school students in Lewiston-Auburn 
+                            on career development. Leads mock interviews sessions to prepare highschoolers for leadership and career growth.
                         </p>
+                        <p><b>Skills:</b> Coaching and Mentoring,Leadership</p>
                     </div>
             
                     <!-- Campus Safety Advisory Council -->
-                    <div style="background-color: #162447; color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 300px; text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                        <h3 style="font-size: 1.5rem; color: #4cafef;">Class Representative, Campus Safety Advisory Council</h3>
+                    <div class="mini-card">
+                        <h3 class="activity-title">Class Representative, Campus Safety Advisory Council</h3>
                         <p>
-                            Represented the Class of 2027 on student government regarding campus safety. Planned and organized safety awareness programs in collaboration 
-                            with the Department of Campus Safety and served as a liaison between the student body and the Campus Safety Advisory Council.
+                            Represents the Class of 2027 on student government meetings regarding campus safety. Planned and organized campus-wide safety programs, including workshops on emergency response protocols and interactive self-defense demonstrations.
                         </p>
-                        <p>
-                            Member of the Planning Committee working to shape and refine campus safety policies and educate the Bates community about emergency response protocols.
-                        </p>
+                        <p><b>Skills:</b> Advocacy, Policy Development, Public Speaking</p>
                     </div>
             
                     <!-- Secretary, International Students Association -->
-                    <div style="background-color: #162447; color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 300px; text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                        <h3 style="font-size: 1.5rem; color: #4cafef;">Secretary, International Students Association</h3>
+                    <div class="mini-card">
+                        <h3 class="activity-title">Secretary, International Students Association</h3>
                         <p>
-                            Supported international students’ transition to college life in Maine by organizing social and cultural activities. Planned the annual 
-                            International Dinner, showcasing diverse traditions and cultures, and facilitated meetings to enhance the inclusivity of the Bates community.
+                            Supports international students’ transition to college life in Maine by organizing social and cultural activities. Coordinates the annual 
+                            International Dinner, showcasing diverse traditions and cultures of international students. Liaise with other campus organizations, faculty, and administration to represent the association’s interests.
                         </p>
+                        <p><b>Skills:</b> Event Planning, Cultural Awareness, Communication</p>
                     </div>
+                    <!-- Secretary, International Students Association -->
+                    <div class="mini-card">
+                        <h3 class="activity-title">Member, Africana Club</h3>
+                        <p>
+                            Assisted in organizing cultural workshops, including traditional dance performances, storytelling sessions, and food fairs, providing students with immersive experiences to connect with African cultures.
+                        </p>
+                        <p><b>Skills:</b> Event Planning, Cultural Advocacy, Team Collaboration, Creativity</p>
+                    </div>
+
+<!-- Student Project Organizer, Physics and Astronomy Club -->
+<div class="mini-card">
+    <h3 class="activity-title">Student Project Organizer, Physics and Astronomy Club</h3>
+    <p>
+        Organizes and leads weekly meetings to foster collaboration among club members on physics and astronomy projects. 
+        Facilitates review sessions and peer-led tutorials to support students in coursework and research, creating a supportive learning environment.
+    </p>
+    <p><b>Skills:</b> Collaboration, Academic Support, Project Management</p>
+</div>
+
+<!-- Assistant Coach, Soccer Club -->
+<div class="mini-card">
+    <h3 class="activity-title">Assistant Coach, Soccer Club</h3>
+    <p>
+        Assists in organizing weekly practice sessions, coaching team members on techniques and strategies to improve gameplay. 
+        Coordinates grant applications and oversees logistics for interclub matches to promote teamwork and engagement.
+    </p>
+    <p><b>Skills:</b> Team Leadership, Strategy Development, Event Coordination</p>
+</div>
+
+<!-- Outside Hitter, Volleyball Club -->
+<div class="mini-card">
+    <h3 class="activity-title">Outside Hitter, Volleyball Club</h3>
+    <p>
+        Leads the volleyball team as an outside hitter, demonstrating strong athleticism and teamwork. 
+        Organizes practice sessions and interclub matches to enhance team cohesion and competitiveness.
+    </p>
+    <p><b>Skills:</b> Teamwork, Sportsmanship, Leadership</p>
+</div>
+
+<!-- Student Project Coordinator, Harward Center -->
+<div class="mini-card">
+    <h3 class="activity-title">Student Project Coordinator, Harward Center</h3>
+    <p>
+        Collaborates with Harward Center staff to create and manage community-engaged learning courses and research projects for students. 
+        Engages in outreach initiatives with community partners to design issue-based volunteer programs for students. 
+        Writes <a href="https://www.bates.edu/harward/2024/06/16/addressing-body-image-and-mindful-eating-with-students-at-hebron-academy/" target="_blank" style="color: #f39c12;">monthly blogs</a> for the Harward Center, highlighting community partnerships and student engagement.
+    </p>
+    <p><b>Skills:</b> Community Outreach, Research Coordination, Writing and Communication</p>
+</div>
                 </div>
-            </section>
-            
-            
-            
-            </div>
-            <!-- Hobbies -->
-            <div id="hobbies" class="interest-card">
-                <h3>Hobbies</h3>
-                <p>Information about your hobbies, such as sports, music, reading, or any creative pursuits.</p>
-            </div>
+
+                
+            </section>  
+           </div>
+           <!-- Honors and Awards Section -->
+<div id="hobbies">
+    <h3 class="activity-title" style="text-align: center;">Honors and Awards</h3>
+    <div class="parent-card honors-awards">
+        <!-- Dana Scholar -->
+        <div class="mini-card">
+            <h3 class="award-title">Dana Scholar, Bates College Class of 2027</h3>
+            <p>
+                Awarded one of the highest honors at Bates College, recognizing outstanding academic achievement, leadership, and community engagement. 
+                The Dana Scholarship is reserved for students who excel both in the classroom and in their contributions to the college community.
+            </p>
+            </p>
+        </div>
+
+        <!-- Rookie of the Year -->
+        <div class="mini-card">
+            <h3 class="award-title">
+                <a href="#" style="text-decoration: none; color: #f39c12;">Rookie of the Year Award</a>
+            </h3>
+            <p>
+                Recognized for Outstanding Community Engagement by a First-Year Student by the Haward Center for Community Partnerships at Bates College.  
+            </p>
+        </div>
+
+        <!-- Dean's List Fall 2023 -->
+        <div class="mini-card">
+            <h3 class="award-title">Dean's List</h3>
+            <p>
+                This award is given to students who achieve a GPA of 3.92 or above per semester.
+            </p>
+            <ul>
+                <li>Fall 2023</li>
+                <li>Winter 2024</li>
+                <li>Fall 2024</lili>
+            </ul>
+
+        </div>
+
+        
+    
+    </div>
+</div>
             <!-- Organizations -->
-            <div id="organizations" class="interest-card">
-                <h3>Organizations</h3>
-                <p>Details about organizations you are involved in, such as professional groups, student associations, or community initiatives.</p>
-            </div>
+<div id="organizations">
+    <h3 class="activity-title" style="text-align: center; color: #f39c12;">Organizations</h3>
+    <div class="parent-card organizations-card">
+        <!-- Mini-Card for Organizations -->
+        <div class="mini-card organizations-mini-card">
+            <ul>
+                <li>American Mathematical Association</li>
+                <li>National Society of Black Physicists</li>
+                <li>National Society of Black Engineers</li>
+                <li>CodePath</li>
+                <li>Colorstack</li>
+            </ul>
+        </div>
+    </div>
+</div>
+            
+            
         </section>
     </main>
     <footer class="footer-section">
