@@ -49,3 +49,12 @@ function highlightNavLink(event) {
         alert('No matching section found. Please try "resume", "projects", "activities", or "publications".');
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show"); // Toggle the 'show' class to display or hide nav-links
+    });
+});
