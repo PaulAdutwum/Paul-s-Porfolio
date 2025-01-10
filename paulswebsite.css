@@ -76,6 +76,7 @@ nav a:hover{
 }
 
 /* General Navigation Styling */
+/* General Navigation Styling */
 nav {
     display: flex;
     justify-content: space-between;
@@ -109,7 +110,7 @@ nav {
 /* Toggle Icon for Small Screens */
 .nav-toggle {
     display: none;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Larger toggle icon */
     color: white;
     cursor: pointer;
 }
@@ -139,54 +140,8 @@ nav {
 
     .nav-toggle {
         display: block; /* Show toggle icon on small screens */
+        margin-left: 20px;
     }
-}
-
-
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Initially hide the links */
-        flex-direction: column; /* Stack links vertically */
-        background-color: #001f3f; /* Dark blue background */
-        width: 100%;
-        position: absolute;
-        top: 60px; /* Adjust to below the header */
-        left: 0;
-        z-index: 1000;
-        padding: 20px 0;
-    }
-
-    .nav-links.show {
-        display: flex; /* Show links when toggled */
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .nav-toggle {
-        display: block; /* Show toggle icon on small screens */
-        font-size: 2rem; /* Larger toggle icon */
-        color: white;
-        cursor: pointer;
-    }
-}
-
-/* Additional Styling for Toggle Icon */
-.nav-toggle {
-    display: none; /* Hide by default for larger screens */
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    margin-left: 20px; /* Adjust as needed */
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 /* Ensure the header items are aligned properly on smaller screens */

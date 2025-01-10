@@ -1,3 +1,4 @@
+// Smooth Scrolling for Internal Links
 document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -16,6 +17,7 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     });
 });
 
+// Highlight Navigation Links Based on Search
 function highlightNavLink(event) {
     event.preventDefault(); // Prevent the form from submitting
 
@@ -50,6 +52,7 @@ function highlightNavLink(event) {
     }
 }
 
+// Toggle Navigation Menu
 document.addEventListener("DOMContentLoaded", () => {
     const navToggle = document.querySelector(".nav-toggle");
     const navLinks = document.querySelector(".nav-links");
