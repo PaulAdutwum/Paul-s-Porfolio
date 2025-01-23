@@ -2,8 +2,8 @@
 document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        if (href.startsWith('#')) { // Only handle internal anchor links
-            e.preventDefault(); // 
+        if (href.startsWith('#')) { 
+            e.preventDefault(); 
             const targetId = href.substring(1); 
             const targetSection = document.getElementById(targetId);
 
@@ -17,14 +17,14 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     });
 });
 
-// Highlight Navigation Links Based on Search
-function highlightNavLink(event) {
-    event.preventDefault(); // Prevent the form from submitting
 
-    // Get the search input value
+function highlightNavLink(event) {
+    event.preventDefault(); 
+
+   
     const query = document.getElementById('search-input').value.toLowerCase();
 
-    // Define a mapping of keywords to nav link IDs
+    
     const navMapping = {
         home: 'nav-home',
         resume: 'nav-resume',
@@ -33,15 +33,15 @@ function highlightNavLink(event) {
         publications: 'nav-publications'
     };
 
-    // Find the corresponding nav link ID
+    
     const navId = navMapping[query];
 
-    // Remove the highlight from all nav links
+   
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('highlight');
     });
 
-    // If a matching nav link exists, highlight it
+  
     if (navId) {
         const navLink = document.getElementById(navId);
         if (navLink) {
@@ -52,12 +52,12 @@ function highlightNavLink(event) {
     }
 }
 
-// Toggle Navigation Menu
+
 document.addEventListener("DOMContentLoaded", () => {
     const navToggle = document.querySelector(".nav-toggle");
     const navLinks = document.querySelector(".nav-links");
 
     navToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("show"); // Toggle the 'show' class to display or hide nav-links
+        navLinks.classList.toggle("show"); 
     });
 });
