@@ -747,7 +747,7 @@ video {
 }
 
 
-.nav-links a.highlight {
+.nav-links a.highlight {   
     background-color: #f39c12; 
     color: white; 
     border-radius: 5px;
